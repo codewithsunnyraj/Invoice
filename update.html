@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bill Invoice</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-size: 12px;
+      }
+
+      .container-mxauto {
+        display: flex;
+        justify-content: center;
+      }
+
+      .container-mxauto .border-invoice {
+        width: 1100px;
+      }
+
+      .table-bordered {
+        border: 1px solid black;
+      }
+
+      .border-invoice {
+        border: 1px solid rgba(0, 0, 0, 0.6);
+      }
+
+      .border-bottom-dark {
+        border-bottom: 1px solid black;
+      }
+
+      .border-dotted {
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
+      }
+
+      .border-section {
+        border: 1px solid black;
+      }
+
+      .font-size-small {
+        font-size: 10px;
+      }
+
+      .font-size-normal {
+        font-size: 12px;
+      }
+
+      .text-center-bold {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      @media print {
+        .no-print {
+          display: none;
+        }
+        .container-mxauto {
+          display: flex;
+          justify-content: center;
+        }
+
+        .container-mxauto .border-invoice {
+          width: 700px;
+        }
+        .table-bordered {
+          border: 1px solid black;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-mxauto my-3">
+      <div class="border-invoice p-3">
+        <div class="text-center">
+          <h5 class="mb-1">Tax Invoice</h5>
+          <p class="mb-0 font-size-small">
+            Registration No: B47721BR2025PTC075814
+          </p>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center my-3">
+          <img src="./logo_bill.jpg" height="80" alt="Logo" />
+          <div class="">
+            <h4 class="mb-0">Company Name Here .......</h4>
+            <p class="mb-0 my-1 font-size-small">
+              Company Address Here .......
+            </p>
+            <p class="mb-0 font-size-small">Company Website Here .......</p>
+          </div>
+        </div>
+
+        <div class="w-100 d-flex border-invoice p-2">
+          <div class="col-md-6 w-50">
+            <p class="mb-1">
+              <b>Invoice No:</b> <span class="border-dotted px-3">INV123</span>
+            </p>
+            <p class="mb-1">
+              <b>Invoice Date:</b>
+              <span class="border-dotted px-3">12-06-2025</span>
+            </p>
+            <p class="mb-1">
+              <b>State:</b> <span class="border-dotted px-3">Bihar</span>
+            </p>
+            <p class="mb-1">
+              <b>State Code:</b> <span class="border-dotted px-3">10</span>
+            </p>
+          </div>
+          <div class="col-md-6 w-50">
+            <p class="mb-1">
+              <b>Mode of Transport:</b>
+              <span class="border-dotted px-3">Road</span>
+            </p>
+            <p class="mb-1">
+              <b>Vehicle No:</b>
+              <span class="border-dotted px-3">BR01AB1234</span>
+            </p>
+            <p class="mb-1">
+              <b>Date of Supply:</b>
+              <span class="border-dotted px-3">12-06-2025</span>
+            </p>
+            <p class="mb-1">
+              <b>Place of Supply:</b>
+              <span class="border-dotted px-3">Patna</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="w-100 d-flex border-invoice mt-3">
+          <div class="col-md-6 w-50 p-2 border-end">
+            <h6 class="text-center fw-bolder mb-2">Consignor / Shipped From</h6>
+            <p class="mb-1"><b>Name</b>: TheCodeX Pvt ltd.</p>
+            <p class="mb-1"><b>Address</b>: Nehru Path, Patna, Bihar</p>
+            <p class="mb-1"><b>GSTIN</b>: 10ABCDE1234F1Z5</p>
+            <p class="mb-1"><b>State</b>: Bihar</p>
+            <p class="mb-1"><b>State Code</b>: 10</p>
+          </div>
+          <div class="col-md-6 w-50 p-2">
+            <h6 class="text-center fw-bolder mb-2">Consignee / Shipped To</h6>
+            <p class="mb-1"><b>Name</b>: ABC Enterprises</p>
+            <p class="mb-1">
+              <b>Address</b>: Noida Sector 2, Gautam Buddha Nagar, UP - 201301
+            </p>
+            <p class="mb-1"><b>GSTIN</b>: 09XYZ9876K1Z2</p>
+            <p class="mb-1"><b>State</b>: Uttar Pradesh</p>
+            <p class="mb-1"><b>State Code</b>: 09</p>
+          </div>
+        </div>
+
+        <div class="table-responsive mt-3">
+          <table class="table table-bordered text-center font-size-small">
+            <thead class="table-light border-section">
+              <tr class="border-section">
+                <th class="border-section" rowspan="2">S.No</th>
+                <th class="border-section" rowspan="2">Description of Goods</th>
+                <th class="border-section" rowspan="2">HSN Code</th>
+                <th class="border-section" rowspan="2">Qty</th>
+                <th class="border-section" rowspan="2">Rate</th>
+                <th class="border-section" rowspan="2">Amount</th>
+                <th class="border-section" colspan="2">GST</th>
+              </tr>
+              <tr>
+                <th class="border-section">Rate (%)</th>
+                <th class="border-section">Amount</th>
+              </tr>
+            </thead>
+            <tbody class="border-section">
+              <tr class="border-section">
+                <td>1</td>
+                <td>Herbal Shampoo</td>
+                <td>3003</td>
+                <td>10</td>
+                <td>120</td>
+                <td>1200</td>
+                <td>18%</td>
+                <td>216</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Aloe Vera Gel</td>
+                <td>3004</td>
+                <td>5</td>
+                <td>200</td>
+                <td>1000</td>
+                <td>12%</td>
+                <td>120</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Aloe Vera Gel</td>
+                <td>3004</td>
+                <td>5</td>
+                <td>200</td>
+                <td>1000</td>
+                <td>12%</td>
+                <td>120</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Aloe Vera Gel</td>
+                <td>3004</td>
+                <td>5</td>
+                <td>200</td>
+                <td>1000</td>
+                <td>12%</td>
+                <td>120</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Aloe Vera Gel</td>
+                <td>3004</td>
+                <td>5</td>
+                <td>200</td>
+                <td>1000</td>
+                <td>12%</td>
+                <td>120</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Aloe Vera Gel</td>
+                <td>3004</td>
+                <td>5</td>
+                <td>200</td>
+                <td>1000</td>
+                <td>12%</td>
+                <td>120</td>
+              </tr>
+              <tr>
+                <td colspan="5" class="text-end fw-bold">Total</td>
+                <td>2200</td>
+                <td></td>
+                <td>336</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-3">
+          <table class="table table-bordered font-size-small">
+            <tr>
+              <td rowspan="3" style="width: 60%">
+                <strong>Total Invoice Amount in Words:</strong><br />
+                Two Thousand Five Hundred Thirty-Six Only
+              </td>
+              <td>Total Amount Before Tax</td>
+              <td>₹2200</td>
+            </tr>
+            <tr>
+              <td>Add: CGST</td>
+              <td>₹168</td>
+            </tr>
+            <tr>
+              <td>Add: SGST</td>
+              <td>₹168</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="text-end mt-4">
+          <p>For <strong>TheCodeX PVT. LTD.</strong></p>
+          <br />
+          <p>Authorised Signatory</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
